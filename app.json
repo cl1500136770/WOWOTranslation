@@ -1,0 +1,11 @@
+{
+  "pages":[
+    "pages/main/main"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "窝窝翻译",
+    "navigationBarTextStyle":"white"
+  }
+}
