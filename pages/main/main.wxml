@@ -4,8 +4,9 @@
     <text class="c-block t-topview-txtZH">在这个世界上，多得是比你丑和比你美的人。所以，不必纠结太多，勇往前行。</text>
   </view>
   <view class="c-minheight t-viewone">
-    <view class="c-minheight t-placeholderview" />
-    <textarea class="c-block c-fullwidth t-inputSearch" maxlength="199" name="textarea1" placeholder="input search" type="textarea" />
+    <input class="c-block c-fullwidth t-inputSearch" maxlength="30" name="input1" placeholder="Input query" type="text" />
+    <image class="t-imgSearch" mode="aspectFit" src="http://qty83k.creatby.com/materials/62984/origin/6ad21d72c40a2d02c217749bfdde9716_origin.png" style="background-size:  contain; background-position:  center center; background-repeat:  no-repeat; background-image: url(http://qty83k.creatby.com/materials/62984/origin/6ad21d72c40a2d02c217749bfdde9716_origin.png); "
+    />
   </view>
   <view class="c-minheight t-centerview-cycleview">
     <text class="c-block t-cycleview-txtZH">今天天气怎么样？</text>
@@ -24,15 +25,5 @@
       <image class="t-cycleview-imgSoud" mode="aspectFit" src="http://qty83k.creatby.com/materials/62984/origin/e8b2f061ddd2ddb8c266b3173d89bd2b_origin.png" style="background-size:    contain; background-position:    center center; background-repeat:    no-repeat; background-image: url(http://qty83k.creatby.com/materials/62984/origin/e8b2f061ddd2ddb8c266b3173d89bd2b_origin.png); "
       />
     </view>
-  </view>
-  <view class="c-minheight t-functionview">
-    <image class="t-functionview-imgCenter" mode="aspectFit" src="http://qty83k.creatby.com/materials/62984/origin/4548cca35648d640c555b1fd7c7fea64_origin.png" style="background-size:  contain; background-position:  center center; background-repeat:  no-repeat; background-image: url(http://qty83k.creatby.com/materials/62984/origin/4548cca35648d640c555b1fd7c7fea64_origin.png); "
-    />
-    <image class="t-functionview-imgLanguage" mode="aspectFit" src="http://qty83k.creatby.com/materials/62984/origin/e643d094aa6e97cebe31d6362e55674c_origin.png" style="background-size: contain; background-position: center center; background-repeat: no-repeat; background-image:  url(http://qty83k.creatby.com/materials/62984/origin/e643d094aa6e97cebe31d6362e55674c_origin.png); "
-    />
-    <image class="t-functionview-imgLanguage" mode="aspectFit" src="http://qty83k.creatby.com/materials/62984/origin/cb15f25735e57227ccf8b3df090dac49_origin.png" style="background-size:    contain; background-position:    center center; background-repeat:    no-repeat; background-image: url(http://qty83k.creatby.com/materials/62984/origin/cb15f25735e57227ccf8b3df090dac49_origin.png); "
-    />
-    <image class="t-functionview-imgTranslation" mode="aspectFit" src="http://qty83k.creatby.com/materials/62984/origin/012d042eb11eaabedfd2c5b7052c4ba9_origin.png" style="background-size: contain; background-position: center center; background-repeat: no-repeat; background-image:  url(http://qty83k.creatby.com/materials/62984/origin/012d042eb11eaabedfd2c5b7052c4ba9_origin.png); "
-    />
   </view>
 </view>

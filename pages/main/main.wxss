@@ -12,7 +12,6 @@ loading, navigator, audio, image, video, map, canvas {
 page {
   height: 100%;
   font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
-  background-color: rgb(0, 0, 0);
 }
 
 checkbox-group, radio-group {
@@ -77,8 +76,8 @@ checkbox-group, radio-group {
 }
 
 .t-topview {
-  height: 260rpx;
-  min-height: 260rpx;
+  height: 130px;
+  min-height: 130px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -90,14 +89,14 @@ checkbox-group, radio-group {
 
 .t-topview-txtZH {
   color: rgb(255, 255, 255);
-  font-size: 26rpx;
+  font-size: 13px;
   width: 90%;
   min-width: 90%;
 }
 
 .t-topview-txtEN {
   color: rgb(255, 255, 255);
-  font-size: 26rpx;
+  font-size: 13px;
   width: 90%;
   min-width: 90%;
   margin-bottom: 9px;
@@ -106,47 +105,55 @@ checkbox-group, radio-group {
 .t-centerview-cycleview {
   width: 90%;
   min-width: 90%;
-  margin-bottom: 19rpx;
+  margin-bottom: 9px;
+  border-bottom-width: 1px;
+  border-bottom-color: rgb(0, 0, 0);
 }
 
 .t-inputSearch {
-  width: 90%;
-  box-shadow: rgb(0, 0, 0) 1px 0px 6px 0px;
-  height: 121rpx;
-  min-height: 121rpx;
-  padding: 12rpx;
+  width: 80%;
+  padding: 0px 3px 0px 6px;
   background-color: rgb(255, 255, 255);
-  border-radius: 6rpx;
-  font-size: 26rpx;
+  border-radius: 3px 0px 0px 3px;
+  font-size: 13px;
   display: block;
-  min-width: 90%;
-  position: absolute;
+  min-width: 80%;
   font-weight: 900;
+  height: 60rpx;
+  background-position: 100% 50%;
+  border-color: rgb(0, 0, 0);
+  border-style: solid none solid solid;
+  min-height: 60rpx;
+  border-width: 1px;
+  border-bottom-width: 1px;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-left-width: 1px;
 }
 
 .t-functionview {
   width: 90%;
   min-width: 90%;
-  min-height: 60rpx;
-  height: 60rpx;
+  min-height: 30px;
+  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: 38rpx;
+  bottom: 19px;
 }
 
 .t-cycleview-txtZH {
-  font-size: 32rpx;
+  font-size: 16px;
 }
 
 .t-cycleview-txtEN {
-  font-size: 32rpx;
+  font-size: 16px;
 }
 
 .t-cycleview-viewtwo {
-  min-height: 40rpx;
-  height: 40rpx;
+  min-height: 20px;
+  height: 20px;
   width: 100%;
   min-width: 100%;
   display: flex;
@@ -169,8 +176,8 @@ checkbox-group, radio-group {
   align-items: center;
   width: 100%;
   min-width: 100%;
-  min-height: 38rpx;
-  height: 38rpx;
+  min-height: 19px;
+  height: 19px;
 }
 
 .t-functionview-imgCenter {
@@ -205,7 +212,7 @@ checkbox-group, radio-group {
   min-width: 50%;
   height: 100%;
   min-height: 100%;
-  font-size: 26rpx;
+  font-size: 13px;
   color: #919191;
 }
 
@@ -214,7 +221,7 @@ checkbox-group, radio-group {
   min-width: 50%;
   height: 100%;
   min-height: 100%;
-  font-size: 26rpx;
+  font-size: 13px;
   color: #919191;
 }
 
@@ -223,17 +230,23 @@ checkbox-group, radio-group {
   min-width: 100%;
   display: flex;
   justify-content: center;
-  position: static;
-  height: 140rpx;
+  height: 70px;
   overflow: visible;
-  min-height: 140rpx;
-  margin-bottom: 19rpx;
+  min-height: 70px;
+  flex-direction: row;
+  align-items: center;
 }
 
-.t-placeholderview {
-  width: 100%;
-  min-width: 100%;
-  height: 50%;
-  min-height: 50%;
-  background-color: rgba(0, 0, 0, 1);
+.t-imgSearch {
+  height: 60rpx;
+  width: 10%;
+  min-height: 1.6px;
+  min-width: 10%;
+  background-color: rgb(255, 255, 255);
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-width: 1px;
+  border-color: rgb(0, 0, 0);
+  border-style: solid;
+  border-left-style: none;
 }
