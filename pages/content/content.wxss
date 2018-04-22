@@ -80,65 +80,29 @@ checkbox-group, radio-group {
   min-height: 130px;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   flex-direction: column;
   background-color: rgb(0, 0, 0);
   min-width: 100%;
-}
-
-.t-topview-txtZH {
-  color: rgb(255, 255, 255);
-  font-size: 13px;
-  width: 90%;
-  min-width: 90%;
-}
-
-.t-topview-txtEN {
-  color: rgb(255, 255, 255);
-  font-size: 13px;
-  width: 90%;
-  min-width: 90%;
   margin-bottom: 9px;
 }
 
-.t-inputSearch {
-  width: 80%;
-  padding: 0px 3px 0px 6px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 3px 0px 0px 3px;
-  font-size: 13px;
-  display: block;
-  min-width: 80%;
-  font-weight: 900;
-  height: 60rpx;
-  background-position: 100% 50%;
-  border-color: rgb(0, 0, 0);
-  border-style: solid none solid solid;
-  min-height: 60rpx;
-  border-width: 1px;
-  border-bottom-width: 1px;
-  border-top-width: 1px;
-  border-right-width: 1px;
-  border-left-width: 1px;
-}
-
-.t-functionview {
+.t-topview-txt {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
   width: 90%;
   min-width: 90%;
-  min-height: 30px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 19px;
+  font-weight: 900;
+  margin-bottom: 19px;
 }
 
 .t-centerview-cycleview {
   width: 90%;
   min-width: 90%;
   margin-bottom: 9px;
+  border-bottom-width: 1px;
+  border-bottom-color: rgb(0, 0, 0);
 }
 
 .t-cycleview-txtFrom {
@@ -147,16 +111,6 @@ checkbox-group, radio-group {
 
 .t-cycleview-txtTo {
   font-size: 16px;
-}
-
-.t-cycleview-viewone {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
-  min-width: 100%;
-  min-height: 19px;
 }
 
 .t-cycleview-viewtwo {
@@ -169,22 +123,22 @@ checkbox-group, radio-group {
   align-items: center;
 }
 
+.t-cycleview-viewone {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  min-width: 100%;
+  min-height: 19px;
+}
+
 .t-cycleview-imgSoud {
   display: inline-block;
   width: 16%;
   height: 100%;
   min-height: 100%;
   min-width: 16%;
-}
-
-.t-functionview-imgCenter {
-  width: 22.5%;
-  min-width: 22.5%;
-  height: 100%;
-  min-height: 100%;
-  background-color: rgb(0, 0, 0);
-  border-radius: 6px 0px 0px 6px;
-  border-bottom-left-radius: 6px;
 }
 
 .t-functionview-imgLanguage {
@@ -228,31 +182,4 @@ word-break: break-all;
   color: #919191;
   word-wrap: break-word;
   word-break: break-all;
-}
-
-.t-viewone {
-  width: 100%;
-  min-width: 100%;
-  display: flex;
-  justify-content: center;
-  height: 140rpx;
-  overflow: visible;
-  min-height: 140rpx;
-  flex-direction: row;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 1);
-}
-
-.t-imgSearch {
-  height: 60rpx;
-  width: 10%;
-  min-height: 1.6px;
-  min-width: 10%;
-  background-color: rgb(255, 255, 255);
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-  border-width: 1px;
-  border-color: rgb(0, 0, 0);
-  border-style: solid;
-  border-left-style: none;
 }

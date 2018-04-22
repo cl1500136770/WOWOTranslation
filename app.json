@@ -1,7 +1,7 @@
 {
   "pages":[
     "pages/main/main",
-    "pages/center/center"
+    "pages/content/content"
   ],
   "window":{
     "backgroundTextStyle":"light",

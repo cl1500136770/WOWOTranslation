@@ -33,7 +33,17 @@ App({
       }
     })
   },
+  //全局变量
   globalData: {
-    userInfo: null
+    userInfo: null,
+    //翻译结果对象
+    translationData: {
+      "translationFrom": "今天天气怎么样",
+      "translationTo": "What's the weather like today",
+      "phonetic": "音标",
+      "explains": "释义",
+      "speakURL": "翻译发音地址"
+    }
+
   }
 })

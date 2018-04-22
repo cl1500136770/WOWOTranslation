@@ -1,35 +1,20 @@
 <view class="c-minheight t-allview">
   <view class="c-minheight t-topview">
-    <text catchtap='click_openContent' class="c-block t-topview-txtEN">{{oneDayEN}}</text>
-    <text catchtap='click_openContent' class="c-block t-topview-txtZH">{{oneDayZH}}</text>
+    <text class="c-block t-topview-txt">生词本</text>
   </view>
 
-  <view class="c-minheight t-viewone">
-    <input bindinput='input_queryTranslation' class="c-block c-fullwidth t-inputSearch" maxlength="30" name="input1" placeholder="Input query" type="text" />
-    <image catchtap='click_queryTranslation' class="t-imgSearch" mode="aspectFit" src="/images/query.png" style="background-size:  contain; background-position:  center center; background-repeat:  no-repeat;" />
-  </view>
-
-  <view wx:for="{{translationList}}" wx:for-item="item" wx:key="index" class="c-minheight t-centerview-cycleview">
+  <view wx:for="{{contentTranslationDataList}}" wx:for-item="item" wx:key="index" class="c-minheight t-centerview-cycleview">
     <text class="c-block t-cycleview-txtFrom">{{item.translationFrom}}</text>
     <text class="c-block t-cycleview-txtTo">{{item.translationTo}}</text>
-
     <view class="c-minheight t-cycleview-viewone">
-      <!-- 带条件if
-      <text wx:if = "{{item.phoneticShow == true }}" class="c-block t-cycleview-txtsoundTB">音标：{{item.phonetic}}</text>
-      <text wx:if = "{{item.explainsShow == true }}" class="c-block t-cycleview-txtsoundTB">释义：{{item.explains}}</text>
-       -->
       <text class="c-block t-cycleview-txtphonetic">音标：{{item.phonetic}}</text>
       <text class="c-block t-cycleview-txtexplains">释义：{{item.explains}}</text>
     </view>
-    
     <!--data-index="{{index}}" 在所要点击的节点添加用来获取所点击的index-->
     <view class="c-minheight t-cycleview-viewtwo">
       <image catchtap='click_readTranslation' data-index="{{index}}" class="t-cycleview-imgSoud" mode="aspectFit" src="/images/voice.png" style="background-size: contain; background-position: center center; background-repeat: no-repeat;" />
       <image catchtap='click_copyTranslation' data-index="{{index}}" class="t-cycleview-imgSoud" mode="aspectFit" src="/images/copy.png" style="background-size:  contain; background-position:  center center; background-repeat:  no-repeat;" />
-      <image catchtap='click_contentTranslation' data-index="{{index}}" class="t-cycleview-imgSoud" mode="aspectFit" src="/images/content.png" style="background-size:   contain; background-position:   center center; background-repeat:   no-repeat;" />
       <image catchtap='click_deleteTranslation' data-index="{{index}}" class="t-cycleview-imgSoud" mode="aspectFit" src="/images/delete.png" style="background-size:    contain; background-position:    center center; background-repeat:    no-repeat;" />
     </view>
-    
   </view>
-
 </view>
