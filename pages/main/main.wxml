@@ -29,7 +29,7 @@
       <image catchtap='click_contentTranslation' data-index="{{index}}" class="t-cycleview-imgSoud" mode="aspectFit" src="/images/content.png" style="background-size:   contain; background-position:   center center; background-repeat:   no-repeat;" />
       <image catchtap='click_deleteTranslation' data-index="{{index}}" class="t-cycleview-imgSoud" mode="aspectFit" src="/images/delete.png" style="background-size:    contain; background-position:    center center; background-repeat:    no-repeat;" />
     </view>
-    
+
   </view>
 
 </view>
