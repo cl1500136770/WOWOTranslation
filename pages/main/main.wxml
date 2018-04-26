@@ -5,6 +5,9 @@
   </view>
 
   <view class="c-minheight t-viewone">
+    <picker class='t-picker' bindchange='change_TagLanguage' value='{{index}}' range='{{tagLanguageArray}}'>
+      <view>{{tagLanguageArray[index]}}</view>
+    </picker>
     <input bindinput='input_queryTranslation' class="c-block c-fullwidth t-inputSearch" maxlength="30" name="input1" placeholder="Input query" type="text" />
     <image catchtap='click_queryTranslation' class="t-imgSearch" mode="aspectFit" src="/images/query.png" style="background-size:  contain; background-position:  center center; background-repeat:  no-repeat;" />
   </view>
@@ -21,7 +24,7 @@
       <text class="c-block t-cycleview-txtphonetic">音标：{{item.phonetic}}</text>
       <text class="c-block t-cycleview-txtexplains">释义：{{item.explains}}</text>
     </view>
-    
+
     <!--data-index="{{index}}" 在所要点击的节点添加用来获取所点击的index-->
     <view class="c-minheight t-cycleview-viewtwo">
       <image catchtap='click_readTranslation' data-index="{{index}}" class="t-cycleview-imgSoud" mode="aspectFit" src="/images/voice.png" style="background-size: contain; background-position: center center; background-repeat: no-repeat;" />
@@ -31,5 +34,7 @@
     </view>
 
   </view>
+
+
 
 </view>

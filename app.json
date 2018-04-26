@@ -1,12 +1,42 @@
 {
   "pages":[
     "pages/main/main",
-    "pages/content/content"
+    "pages/content/content",
+    "pages/read/read",
+    "pages/talk/talk"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#000",
+    "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTitleText": "窝窝翻译",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#7F8389",
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "text": "文字翻译",
+        "pagePath": "pages/main/main",
+        "iconPath": "/images/toolbar/text2.png",
+        "selectedIconPath": "/images/toolbar/text.png"
+      },
+      {
+        "text": "每日读刊",
+        "pagePath": "pages/read/read",
+        "iconPath": "/images/toolbar/read2.png",
+        "selectedIconPath": "/images/toolbar/read.png"
+      },
+      {
+        "text": "语音翻译",
+        "pagePath": "pages/talk/talk",
+        "iconPath": "/images/toolbar/talk2.png",
+        "selectedIconPath": "/images/toolbar/talk.png"
+      }
+    ],
+    "backgroundColor": "#ffffff",
+    "position": "bottom",
+    "borderStyle": "white"
+    
   }
 }

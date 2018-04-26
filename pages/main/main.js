@@ -5,10 +5,11 @@ var untilDate = require('../../utils/util.js');//用来获取时间
 var md5Date = require('../../utils/zhmd5.js');//用来MD5加密
 
 var inputValue = '';//存储输入框的值
+var tagLanguage = 'auto';//存储用户所选的目标语言
 
 var translationDataList = new Array();//存储翻译数据data
 var contentTranslationDataList = new Array();//存储生词本数据data
-
+var tagLanguageArray = ['目标语言', '英文', '中文', '日文', '韩文', '法文', '俄文', '葡萄牙文', '西班牙文'];//目标语言选择集合
 
 // 创建页面实例对象
 Page({
@@ -22,7 +23,8 @@ Page({
 
   data: {
 
-
+    tagLanguageArray: tagLanguageArray,
+    index: 0,
 
   },
 
@@ -123,6 +125,40 @@ Page({
 
   //以下为自定义点击事件
 
+
+
+  //目标语言选择
+  change_TagLanguage:function(e){
+
+    console.log(tagLanguageArray[indexValue])
+
+    var indexValue = e.detail.value;
+    if (tagLanguageArray[indexValue] == '目标语言'){
+      tagLanguage = 'auto';
+    } else if (tagLanguageArray[indexValue] == '英文'){
+      tagLanguage = 'EN';
+    } else if (tagLanguageArray[indexValue] == '中文') {
+      tagLanguage = 'zh-CHS';
+    } else if (tagLanguageArray[indexValue] == '日文') {
+      tagLanguage = 'ja';
+    } else if (tagLanguageArray[indexValue] == '韩文') {
+      tagLanguage = 'ko';
+    } else if (tagLanguageArray[indexValue] == '法文') {
+      tagLanguage = 'fr';
+    } else if (tagLanguageArray[indexValue] == '俄文') {
+      tagLanguage = 'ru';
+    } else if (tagLanguageArray[indexValue] == '葡萄牙文') {
+      tagLanguage = 'pt';
+    } else if (tagLanguageArray[indexValue] == '西班牙文') {
+      tagLanguage = 'es';
+    }
+
+    this.setData({//设置picker目标语言选项
+        index: indexValue
+    })
+
+  },
+
   //获取输入框的值
   input_queryTranslation: function (e) {
 
@@ -183,8 +219,8 @@ Page({
             url: 'https://openapi.youdao.com/api',
             data: {
               q: inputValue,
-              from: '',
-              to: '',
+              from: 'auto',
+              to: tagLanguage,
               appKey: appkey,
               salt: salt,
               sign: md5Date.md5(sign),
@@ -472,5 +508,7 @@ Page({
     })
 
   },
+
+
 
 })
