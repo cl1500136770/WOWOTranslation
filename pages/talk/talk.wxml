@@ -1,0 +1,58 @@
+<view class="c-minheight t-contentView">
+  <scroll-view class="c-minheight t-contentScrollView" lower-threshold="50" upper-threshold="50" scroll-y="True" scroll-into-view="{{toView}}" >
+      <view class="c-minheight t-content-viewSix">
+      <image class="t-content-viewSix-img" mode="scaleToFill" src="/images/gril.jpg" />
+      <text animation="{{wx_text_31310439.animation}}" catchtap="tap_56047a51" class="c-block t-content-viewSix-txt" style="">What's the weather like today?</text>
+    </view>
+    <view class="c-minheight t-content-viewNine">
+      <text class="c-block t-content-viewNine-txt">今天天气怎么样？</text>
+      <image class="t-content-viewNine-img" mode="aspectFit" src="/images/boy.jpg" />
+    </view>
+    <view class="c-minheight t-content-viewSix">
+      <image class="t-content-viewSix-img" mode="scaleToFill" src="/images/gril.jpg" />
+      <text class="c-block t-content-viewSix-txt">Click on the translated content for reading.</text>
+    </view> 
+    <view class="c-minheight t-content-viewNine">
+      <text class="c-block t-content-viewNine-txt">点击对话框内容进行阅读</text>
+      <image class="t-content-viewNine-img" mode="aspectFit" src="/images/boy.jpg" />
+    </view>
+    <view class="c-minheight t-content-viewSix">
+      <image class="t-content-viewSix-img" mode="scaleToFill" src="/images/gril.jpg" />
+      <text class="c-block t-content-viewSix-txt">A menu appears by pressing the dialog box.</text>
+    </view>
+    <view class="c-minheight t-content-viewNine">
+      <text class="c-block t-content-viewNine-txt">长按对话框出现菜单</text>
+      <image class="t-content-viewNine-img" mode="aspectFit" src="/images/boy.jpg" />
+    </view> 
+
+    <!--按键说话view-->
+    <view hidden='{{hideTalkZH}}' class="c-minheight t-content-viewNine">
+      <div id="preloader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <image class="t-content-viewNine-img" mode="aspectFit" src="/images/boy.jpg" />
+    </view>
+    <view hidden='{{hideTalkEN}}' class="c-minheight t-content-viewSix">
+      <image class="t-content-viewSix-img" mode="scaleToFill" src="/images/gril.jpg" />
+      <div id="preloader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </view>
+
+    <!--定位view 用来打开页面时定位至最底部-->
+    <view id='viewhelp'></view>
+  </scroll-view>
+</view>
+
+ <view class="c-minheight t-bottomView">
+  <button catchtouchstart='startTalkEN' catchtouchend='stopTalkEN' plain='{{plainEN}}' class="c-block t-bottom-txtEN">Hold to Talk</button>
+  <button catchtouchstart='startTalkZH' catchtouchend='stopTalkZH' plain='{{plainZH}}' class="c-block t-bottom-txtZH">按住讲话</button>
+</view> 

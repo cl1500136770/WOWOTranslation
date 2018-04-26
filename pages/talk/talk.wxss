@@ -1,0 +1,275 @@
+/* 基础样式 */
+
+/*
+active:标签按下触发的状态
+.t-bottom-txtEN:active {
+  background-color: rgba(122, 122, 122, 1);
+}
+*/
+
+/*
+隐藏滚动条
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+*/
+
+view, scroll-view, swiper, swiper-item, icon, text, progress, button,
+checkbox-group, checkbox, form, input, label, picker, radio-group, radio, slider,
+switch, action-sheet, action-sheet-item, action-sheet-cancel, modal, toast,
+loading, navigator, audio, image, video, map, canvas {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+page {
+  height: 100%;
+  font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+}
+
+checkbox-group, radio-group {
+  display: block;
+}
+
+:before, :after, ::before, ::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.c-minheight {
+  min-height: 80px;
+}
+
+.c-full {
+  width: 100%;
+  height: 100%;
+}
+
+.c-block {
+  display: block;
+}
+
+.c-autosize {
+  width: auto;
+  height: auto;
+}
+
+.c-fullwidth {
+  width: 100%;
+}
+
+.c-fullheight {
+  height: 100%;
+}
+
+.c-initHide {
+  opacity: 0 !important;
+}
+
+.c-ellipse {
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+/* 自定义样式 */
+
+.t-contentView {
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  min-height: 100%;
+  padding-bottom: 99rpx;
+}
+
+.t-contentScrollView {
+  min-width: 100%;
+  display: inline;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+/*隐藏滚动条*/
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.t-bottomView {
+  width: 100%;
+  min-width: 100%;
+  height: 9%;
+  min-height: 9%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  position: absolute;
+  bottom: 0px;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.t-content-viewNine {
+  width: 100%;
+  min-width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 9px;
+}
+
+.t-content-viewNine-img {
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  min-height: 40px;
+  border-radius: 20px;
+  border-bottom-right-radius: 19px;
+  border-bottom-left-radius: 19px;
+  border-top-right-radius: 19px;
+  border-top-left-radius: 19px;
+}
+
+.t-content-viewNine-txt {
+  width: 200px;
+  min-width: 200px;
+  font-size: 16px;
+  background-color: rgb(232, 232, 232);
+  border-radius: 3px;
+  padding: 3px 6px;
+  margin-right: 9px;
+  padding-right: 6px;
+}
+
+.t-content-viewSix {
+  width: 100%;
+  min-width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 9px;
+}
+
+.t-content-viewSix-txt {
+  width: 200px;
+  min-width: 200px;
+  font-size: 16px;
+  background-color: rgb(232, 232, 232);
+  border-radius: 3px;
+  padding: 3px 6px;
+  margin-left: 9px;
+  background-position: 0% 0%;
+}
+
+.t-content-viewSix-img {
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  min-height: 40px;
+  border-radius: 20px;
+  border-bottom-right-radius: 19px;
+  border-bottom-left-radius: 19px;
+  border-top-right-radius: 19px;
+  border-top-left-radius: 19px;
+}
+
+.t-bottom-txtEN {
+  width: 40%;
+  min-width: 40%;
+  text-align: center;
+  font-size: 28rpx;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  border-radius: 6px 6px 6px 6px;
+  height: 91%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 91%;
+}
+
+.t-bottom-txtZH {
+  width: 40%;
+  min-width: 40%;
+  text-align: center;
+  font-size: 28rpx;
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+  height: 91%;
+  min-height: 91%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px 6px 6px 6px;
+}
+
+/*语音输入动画元素*/
+
+#preloader {
+  position: relative;
+  margin-right: 69px;
+  margin-left: 19px;
+}
+
+#preloader span {
+  display: block;
+  bottom: 0px;
+  width: 9px;
+  height: 6px;
+  background: #000;
+  position: absolute;
+  animation: preloader 1.5s infinite ease-in-out;
+}
+
+#preloader span:nth-child(2) {
+  left: 11px;
+  animation-delay: 0.2s;
+}
+
+#preloader span:nth-child(3) {
+  left: 22px;
+  animation-delay: 0.4s;
+}
+
+#preloader span:nth-child(4) {
+  left: 33px;
+  animation-delay: 0.6s;
+}
+
+#preloader span:nth-child(5) {
+  left: 44px;
+  animation-delay: 0.8s;
+}
+
+@keyframes preloader {
+  0% {
+    height: 5px;
+    transform: translateY(0px);
+    background: #000;
+  }
+
+  25% {
+    height: 30px;
+    transform: translateY(15px);
+    background: #000;
+  }
+
+  50% {
+    height: 5px;
+    transform: translateY(0px);
+    background: #000;
+  }
+
+  100% {
+    height: 5px;
+    transform: translateY(0px);
+    background: #000;
+  }
+}
