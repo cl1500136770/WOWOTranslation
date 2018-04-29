@@ -9,7 +9,7 @@ Page({
   /**
    * 页面名称
    */
-  name: "content",
+  name: "content生词本页",
   /**
    * 页面的初始数据
    */

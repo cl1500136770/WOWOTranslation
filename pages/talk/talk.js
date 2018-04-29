@@ -20,7 +20,7 @@ Page({
   /**
    * 页面名称
    */
-  name: "talk",
+  name: "talk语音翻译页",
   /**
    * 页面的初始数据
    */
@@ -137,7 +137,12 @@ Page({
       toView: 'viewhelp'
     })
 
-
+    //开始录音
+    recorder.onStart(() => {
+      console.log('开始录音')
+    })
+    recorder.start(options)
+    
   },
 
   //英文语音输入结束

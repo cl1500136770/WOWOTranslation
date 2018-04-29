@@ -1,0 +1,9 @@
+<view class="c-minheight r-allView" >
+    <view catchtap='click_openNews' wx:for="{{newsList}}" wx:for-item="item" wx:key="index" data-index="{{index}}" class="c-minheight r-contentView" >
+        <image class="r-content-img"  mode="scaleToFill" src="{{item.imageUrls[0]}}"/>
+        <view class="c-minheight r-content-view" >
+            <text class="c-block r-content-txtTitle" >{{item.title}}</text>
+            <text class="c-block r-content-txtTime" >{{item.publishDateStr}}</text>
+        </view>
+    </view>
+</view>

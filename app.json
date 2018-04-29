@@ -2,7 +2,9 @@
   "pages":[
     "pages/main/main",
     "pages/content/content",
+    "pages/ocr/ocr",
     "pages/read/read",
+    "pages/details/details",
     "pages/talk/talk"
   ],
   "window":{
@@ -18,19 +20,19 @@
       {
         "text": "文字翻译",
         "pagePath": "pages/main/main",
-        "iconPath": "/images/toolbar/text2.png",
+        "iconPath": "/images/toolbar/text9.png",
         "selectedIconPath": "/images/toolbar/text.png"
       },
       {
-        "text": "每日读刊",
-        "pagePath": "pages/read/read",
-        "iconPath": "/images/toolbar/read2.png",
-        "selectedIconPath": "/images/toolbar/read.png"
+        "text": "拍照翻译",
+        "pagePath": "pages/ocr/ocr",
+        "iconPath": "/images/toolbar/camera9.png",
+        "selectedIconPath": "/images/toolbar/camera.png"
       },
       {
         "text": "语音翻译",
         "pagePath": "pages/talk/talk",
-        "iconPath": "/images/toolbar/talk2.png",
+        "iconPath": "/images/toolbar/talk9.png",
         "selectedIconPath": "/images/toolbar/talk.png"
       }
     ],

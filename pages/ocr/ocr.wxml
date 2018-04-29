@@ -1,0 +1,25 @@
+<view class="c-minheight p-allView" >
+
+    <view class="c-minheight p-oneView" >
+        <text catchtap='click_selectPhoto' class="c-block p-one-btnSelect" >选照/拍照</text>
+    </view>
+
+    <view hidden='{{hideTwoView}}' class="c-minheight p-twoView" >
+        <image class="p-two-imgPhoto"  mode="scaleToFill" src="{{imgPhoto}}"/>
+        <view class="c-minheight p-two-btnView" >
+            <text catchtap='click_selectPhoto' class="c-block p-two-btnSelect" >重新选照/拍照</text>
+        </view>
+        <!--上层遮罩标签view-->
+        <view hidden='{{hideUpperView}}' class="c-minheight p-two-upperView" >
+            <scroll-view class="c-minheight p-two-scrollView"  lower-threshold="50" scroll-y="True" style="overflow-x: hidden; overflow-y: auto;" upper-threshold="50">
+                <!--翻译内容循环-->
+                <view wx:for="{{translationToList}}" wx:for-item="item" wx:key="index" class="c-minheight p-two-txtView" >
+                    <text class="c-block p-two-txtTo" >{{item.to}}</text>
+                </view>
+
+            </scroll-view>
+        </view>
+
+    </view>
+
+</view>

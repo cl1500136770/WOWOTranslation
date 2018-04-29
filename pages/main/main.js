@@ -16,7 +16,7 @@ Page({
   /**
    * 页面名称
    */
-  name: "main",
+  name: "main文字翻译页",
   /**
    * 页面的初始数据
    */
@@ -293,11 +293,9 @@ Page({
               wx.hideToast();//隐藏
 
               wx.showModal({
-
                 content: '获取翻译失败',
                 showCancel: false,
                 confirmColor: '#000000',
-
               });
 
             }
