@@ -180,6 +180,12 @@ Page({
     var cusid = '';//终端用户识别码(选填)
     var rq = '';//带有特殊设定参数的 JSON 字符串(选填)
 
+    // wx.uploadFile({
+    //   url: 'https://cn.olami.ai/cloudservice/api',
+    //   filePath: '',
+    //   name: '',
+    // })
+
     wx.request({
       //https://cn.olami.ai/cloudservice/api?api=asr&appkey=your_app_key&timestamp=current_timestamp&sign=your_sign&seq=seg,nli&compress=0&stop=1
       url: 'https://cn.olami.ai/cloudservice/api',

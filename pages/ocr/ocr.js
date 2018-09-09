@@ -86,7 +86,6 @@ Page({
           hideTwoView:false,
         })
         
-
         //加载照片识别
         that.getPhotoTranslation(tempFilePaths[0])
 
@@ -126,64 +125,64 @@ Page({
             title: '加载OCR翻译中',
           })
 
+          //请求参数准备
+          var imagePhoto = wx.arrayBufferToBase64(imagePhotoOCR);//要识别的图片，需要Base64编码
+          var toLanguage = 'zh-en';//要识别的语言类型 英文：en，中英混合：zh-en
+          var detectType = '10012';//按字识别：10011；按行识别：10012
+          var imageType = '1';//图片类型，目前只支持Base64
+          var appKeys = '166b9fcfe89034ee';
+          var key = 'pEx2a8sGIRbqXaiy2OTZWVg1RFKjSlTS';
+          var salt = (new Date).getTime;//随机数
+          var sign = appKeys + imagePhoto + salt + key;//签名
+          var docType = 'JSON';//服务器响应类型，目前只支持json
+
+          console.log(imagePhoto)
+          console.log(md5Date.md5(sign));
+          console.log(sign);
+
           wx.request({
-            url: 'https://www.dounine.com',
-          })
+            url: 'https://openapi.youdao.com/ocrapi',
+            data: {
+              img:imagePhoto,
+              langType:toLanguage,
+              detectType: detectType,
+              imageType, imageType,
+              appKey: appKeys,
+              salt: salt,
+              sign: md5Date.md5(sign),
+              docType: docType
+            },
+            method: 'POST',
+            header: { 'Content-type': 'application/json' },
+            success:function(res){
+              wx.hideLoading()
+              console.log(res.data)
 
-          // //请求参数准备
-          // var imagePhoto = imagePhotoOCR;//要识别的图片，需要Base64编码
-          // var toLanguage = 'zh-en';//要识别的语言类型 英文：en，中英混合：zh-en
-          // var detectType = '10012';//按字识别：10011；按行识别：10012
-          // var imageType = '1';//图片类型，目前只支持Base64
-          // var appKey = '166b9fcfe89034ee';
-          // var key = 'pEx2a8sGIRbqXaiy2OTZWVg1RFKjSlTS';
-          // var salt = (new Date).getTime;//随机数
-          // var sign = appkey + imagePhoto + salt + key;//签名
-          // var docType = 'JSON';//服务器响应类型，目前只支持json
+            },
+            fail:function(){
+              wx.hideLoading()
 
-          // wx.request({
-          //   url: 'https://openapi.youdao.com/ocrapi',
-          //   data: {
-          //     img:imagePhoto,
-          //     langType:toLanguage,
-          //     detectType: detectType,
-          //     imageType, imageType,
-          //     appKey: appKey,
-          //     salt: salt,
-          //     sign: md5Date.md5(sign),
-          //     docType: docType
-          //   },
-          //   method: 'GET',
-          //   header: { 'Content-type': 'application/json' },
-          //   success:function(res){
-          //     wx.hideLoading()
-          //     console.log(res.data)
-
-          //   },
-          //   fail:function(){
-          //     wx.hideLoading()
-
-          //     wx.showModal({//弹框
-          //       content: 'OCR翻译出错，请重试',
-          //       showCancel: true,
-          //       confirmColor: '#000000',
-          //       confirmText:'重试',
-          //       success:function(res){
+              wx.showModal({//弹框
+                content: 'OCR翻译出错，请重试',
+                showCancel: true,
+                confirmColor: '#000000',
+                confirmText:'重试',
+                success:function(res){
                   
-          //         if (res.confirm){//用户点击确认
+                  if (res.confirm){//用户点击确认
 
-          //           //再次调用自己
-          //           that.getPhotoTranslation(imagePhotoOCR)
+                    //再次调用自己
+                    that.getPhotoTranslation(imagePhotoOCR)
 
-          //         } else if (res.cancel){//用户点击取消
-          //           console.log('用户点击取消')
-          //         }
+                  } else if (res.cancel){//用户点击取消
+                    console.log('用户点击取消')
+                  }
 
-          //       }
-          //     });
+                }
+              });
 
-          //   }
-          // })
+            }
+          })
 
         }
 
@@ -192,9 +191,6 @@ Page({
 
 
   },
-
-
-
 
 
 })
